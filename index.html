@@ -6,8 +6,7 @@
     <title>Flex Landing Page</title>
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="media_queries.css">
-
+    <link rel="stylesheet" href="media_queries.css" />
   </head>
   <body>
     <!-- top - banner -->
@@ -26,7 +25,7 @@
         <a href="#" class="company-logo">
           <img src="./assets/asset 1.png" alt="company logo" />
         </a>
-        <div class="nav-links">
+        <div class="nav-links active" id="nav-links">
           <ul class="flex">
             <li><a href="" class="hover-links">Products</a></li>
             <li><a href="" class="hover-links">Customer</a></li>
@@ -36,6 +35,9 @@
             <li><a href="" class="hover-links primary-button">Sign up</a></li>
           </ul>
         </div>
+        <a href="#" class="nav-toggle lover-link" id="nav-toggle"
+          ><i class="fa-solid fa-bars"></i
+        ></a>
       </div>
     </nav>
 
@@ -282,17 +284,15 @@
 
     <div class="sub-footer">
       <div class="container flex subfooter-container">
-        <div class="subfooter-headings flex">
-          <a href="#" class="subfooter-hover hover-link">Privacy policy</a>
-          <a href="#" class="subfooter-hover hover-link">Privacy policy</a>
-          <a href="#" class="subfooter-hover hover-link">Privacy policy</a>
-          <a href="#" class="subfooter-hover hover-link"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="#" class="subfooter-hover hover-link"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-        </div>
+        <a href="#" class="subfooter-hover hover-link">Privacy policy</a>
+        <a href="#" class="subfooter-hover hover-link">Privacy policy</a>
+        <a href="#" class="subfooter-hover hover-link">Privacy policy</a>
+        <a href="#" class="subfooter-hover hover-link"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="#" class="subfooter-hover hover-link"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
       </div>
     </div>
 
@@ -300,5 +300,14 @@
       src="https://kit.fontawesome.com/486def2ebe.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const toggleButton = document.getElementById("nav-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
